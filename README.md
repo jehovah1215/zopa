@@ -32,7 +32,8 @@ Use either this bash script or steps below to run the App
 
 The application takes the arguments in following form :
   {market_file_path} {loan_amount} 
-
+  
+*	 chmod a+x zopa-rate.sh   (in case you need to give permissions to run bash)
 *  	./zopa-rate.sh market.csv 1000  
 
   			OR
