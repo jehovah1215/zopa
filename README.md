@@ -8,9 +8,6 @@ Assumptions
 That the supplied rate in the excel file is yearly rate
 That a lender's offer can be partly utilized but at the given offer rate i.e. a lender can have availability of £600 but we may only need £300
 
-Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 Prerequisites
 You need to install the following tools
 
@@ -19,8 +16,8 @@ Maven
 
 Building the code:
 
-Clone from git or unzip the supplied zip file
-From the terminal (MAC) navigate to the root location of the project, where the POM is.
+Clone from git or unzip the supplied zip file  (git clone git@github.com:jehovah1215/zopa.git)
+From the terminal (MAC) navigate to the root location of the project, where the POM.xml is. (ex : )
 
 mvn clean install
 Running the App
