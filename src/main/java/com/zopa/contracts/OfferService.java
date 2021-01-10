@@ -1,8 +1,8 @@
-package com.zopa.dev.contracts;
+package com.zopa.contracts;
 
-import com.zopa.dev.Exceptions.InsufficientOfferException;
-import com.zopa.dev.model.Loan;
-import com.zopa.dev.model.Offer;
+import com.zopa.Exceptions.InsufficientOfferException;
+import com.zopa.model.Loan;
+import com.zopa.model.Offer;
 
 import java.io.IOException;
 import java.util.ArrayList;

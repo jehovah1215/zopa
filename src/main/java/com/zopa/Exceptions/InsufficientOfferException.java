@@ -1,4 +1,4 @@
-package com.zopa.dev.Exceptions;
+package com.zopa.Exceptions;
 
 public class InsufficientOfferException extends RuntimeException {
 

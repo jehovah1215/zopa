@@ -1,9 +1,12 @@
-package com.zopa.dev.service;
+package com.zopa.service;
 
-import com.zopa.dev.contracts.CalculationService;
-import com.zopa.dev.contracts.OfferService;
-import com.zopa.dev.model.Loan;
-import com.zopa.dev.model.Offer;
+import com.zopa.contracts.CalculationService;
+import com.zopa.contracts.OfferService;
+import com.zopa.model.Loan;
+import com.zopa.model.Offer;
+import com.zopa.service.CreditOfferService;
+import com.zopa.service.QuoteCalculationService;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +24,7 @@ public class QuoteCalculationServiceTest {
     @Before
     public void setUp() throws Exception {
         String filepath = getClass().getClassLoader().getResource("MarketData.csv").getPath();
-        OfferService offerService = new CsvOfferService(filepath);
+        OfferService offerService = new CreditOfferService(filepath);
         Loan loanRequest = new Loan(new BigDecimal("1000.00"));
         List<Offer> offers = offerService.getLoanOffers(loanRequest);
 

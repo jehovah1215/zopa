@@ -1,8 +1,10 @@
-package com.zopa.dev.service;
+package com.zopa.service;
 
-import com.zopa.dev.Exceptions.InsufficientOfferException;
-import com.zopa.dev.model.Loan;
-import com.zopa.dev.model.Offer;
+import com.zopa.Exceptions.InsufficientOfferException;
+import com.zopa.model.Loan;
+import com.zopa.model.Offer;
+import com.zopa.service.CreditOfferService;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,12 +18,12 @@ import static org.junit.Assert.assertEquals;
 public class CsvOfferServiceTest {
 
     private final ClassLoader classLoader = getClass().getClassLoader();
-    private CsvOfferService offerService;
+    private CreditOfferService offerService;
 
     @Before
     public void setUp() {
         String filepath = classLoader.getResource("MarketData.csv").getPath();
-        offerService = new CsvOfferService(filepath);
+        offerService = new CreditOfferService(filepath);
     }
 
     @Test

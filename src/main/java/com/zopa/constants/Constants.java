@@ -1,8 +1,8 @@
-package com.zopa.dev.constants;
+package com.zopa.constants;
 
 import java.math.BigDecimal;
 
-public class QuoteConstant {
+public class Constants {
 
     // This could be made configurable
     public static BigDecimal INCREMENT_AMOUNT = BigDecimal.valueOf(100);

@@ -1,9 +1,9 @@
-package com.zopa.dev.service;
+package com.zopa.service;
 
-import com.zopa.dev.Exceptions.InsufficientOfferException;
-import com.zopa.dev.contracts.OfferService;
-import com.zopa.dev.model.Loan;
-import com.zopa.dev.model.Offer;
+import com.zopa.Exceptions.InsufficientOfferException;
+import com.zopa.contracts.OfferService;
+import com.zopa.model.Loan;
+import com.zopa.model.Offer;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class CsvOfferService implements OfferService {
+public class CreditOfferService implements OfferService {
 
     private final ArrayList<Offer> offers = new ArrayList<>();
     private final String filepath;
@@ -21,7 +21,7 @@ public class CsvOfferService implements OfferService {
     /**
      * @param filepath
      */
-    public CsvOfferService(String filepath) {
+    public CreditOfferService(String filepath) {
         this.filepath = filepath;
     }
 

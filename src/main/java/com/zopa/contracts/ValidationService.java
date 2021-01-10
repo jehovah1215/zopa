@@ -1,7 +1,7 @@
-package com.zopa.dev.contracts;
+package com.zopa.contracts;
 
-import com.zopa.dev.Exceptions.InvalidRequestAmountException;
-import com.zopa.dev.model.Loan;
+import com.zopa.Exceptions.InvalidRequestAmountException;
+import com.zopa.model.Loan;
 
 public interface ValidationService {
 
@@ -18,7 +18,7 @@ public interface ValidationService {
      * @return sucess/fail
      * @throws InvalidRequestAmountException
      */
-    default boolean Validate(Loan loan) throws InvalidRequestAmountException {
+    default boolean validateLoan(Loan loan) throws InvalidRequestAmountException {
         return false;
     }
 }

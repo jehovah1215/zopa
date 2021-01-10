@@ -1,4 +1,4 @@
-package com.zopa.dev.model;
+package com.zopa.model;
 
 import java.math.BigDecimal;
 

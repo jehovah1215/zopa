@@ -1,15 +1,15 @@
-package com.zopa.dev;
+package com.zopa.main;
 
-import com.zopa.dev.Exceptions.InsufficientOfferException;
-import com.zopa.dev.Exceptions.InvalidRequestAmountException;
-import com.zopa.dev.contracts.CalculationService;
-import com.zopa.dev.contracts.OfferService;
-import com.zopa.dev.contracts.ValidationService;
-import com.zopa.dev.model.Loan;
-import com.zopa.dev.model.Offer;
-import com.zopa.dev.service.CsvOfferService;
-import com.zopa.dev.service.LoanValidationService;
-import com.zopa.dev.service.QuoteCalculationService;
+import com.zopa.Exceptions.InsufficientOfferException;
+import com.zopa.Exceptions.InvalidRequestAmountException;
+import com.zopa.contracts.CalculationService;
+import com.zopa.contracts.OfferService;
+import com.zopa.contracts.ValidationService;
+import com.zopa.model.Loan;
+import com.zopa.model.Offer;
+import com.zopa.service.CreditOfferService;
+import com.zopa.service.LoanValidationService;
+import com.zopa.service.QuoteCalculationService;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.List;
 /*
  * This class the main entry point of the service
  */
-public class AppEntry {
+public class App {
 
     // Following services will be auto injected by using dependency injection
     private static ValidationService validationService = new LoanValidationService();
@@ -40,10 +40,10 @@ public class AppEntry {
             Loan loan = new Loan(args[1]);
 
             // First call is to validate
-            validationService.Validate(loan);
+            validationService.validateLoan(loan);
 
             // Create and initialize the offer service
-            offerService = new CsvOfferService(args[0]);
+            offerService = new CreditOfferService(args[0]);
 
             // Offers should only be obtained if request is valid
             List<Offer> offers = offerService.getLoanOffers(loan);

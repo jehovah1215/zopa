@@ -1,14 +1,14 @@
-package com.zopa.dev.service;
+package com.zopa.service;
 
-import com.zopa.dev.Exceptions.InvalidRequestAmountException;
-import com.zopa.dev.contracts.ValidationService;
-import com.zopa.dev.model.Loan;
+import com.zopa.Exceptions.InvalidRequestAmountException;
+import com.zopa.contracts.ValidationService;
+import com.zopa.model.Loan;
+
+import static com.zopa.constants.Constants.INCREMENT_AMOUNT;
+import static com.zopa.constants.Constants.LOWER_RANGE;
+import static com.zopa.constants.Constants.UPPER_RANGE;
 
 import java.math.BigDecimal;
-
-import static com.zopa.dev.constants.QuoteConstant.INCREMENT_AMOUNT;
-import static com.zopa.dev.constants.QuoteConstant.LOWER_RANGE;
-import static com.zopa.dev.constants.QuoteConstant.UPPER_RANGE;
 
 public class LoanValidationService implements ValidationService {
 
@@ -28,7 +28,7 @@ public class LoanValidationService implements ValidationService {
      * @throws InvalidRequestAmountException
      */
     @Override
-    public boolean Validate(Loan loan) throws InvalidRequestAmountException {
+    public boolean validateLoan(Loan loan) throws InvalidRequestAmountException {
 
         if (loan.getRequestedAmount().compareTo(LOWER_RANGE) < 0 || loan.getRequestedAmount().compareTo(UPPER_RANGE) > 0) {
             throw new InvalidRequestAmountException("The requested amount is out of range 1000 and 15000");

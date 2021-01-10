@@ -1,4 +1,4 @@
-package com.zopa.dev.contracts;
+package com.zopa.contracts;
 
 import java.math.BigDecimal;
 
