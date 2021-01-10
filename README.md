@@ -22,18 +22,28 @@ Clone from git or unzip the supplied zip file
 
  * git clone git@github.com:jehovah1215/zopa.git 
 
-From the terminal (MAC) navigate to the root location of the project, where the POM.xml is located.
+From the terminal (MAC) navigate to the root location of the project, where the pom.xml is located.
   ( /*path to zopa folder/*)
+  
 
- * mvn clean install
+Running the App :
 
-Running the App
+Use either this bash script or steps below to run the App
 
-Sample test file is located at /src/test/resources
+The application takes the arguments in following form :
+  {market_file_path} {loan_amount} 
 
-From the root path, run the following commands:
+*  	./zopa-rate.sh market.csv 1000  
 
-*  mvn exec:java -Dexec.mainClass=com.zopa.main.App -Dexec.args="src/test/resources/MarketData.csv 1000"
+  			OR
+
+Sample test file is located at /src/test/resources (market.csv)
+
+ From the root path, run the following commands:
+
+* mvn clean install
+
+*  mvn exec:java -Dexec.mainClass=com.zopa.main.App -Dexec.args="src/test/resources/market.csv 1000"
 
 Running the tests
 

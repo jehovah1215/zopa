@@ -22,7 +22,7 @@ public class CsvOfferServiceTest {
 
     @Before
     public void setUp() {
-        String filepath = classLoader.getResource("MarketData.csv").getPath();
+        String filepath = classLoader.getResource("market.csv").getPath();
         offerService = new CreditOfferService(filepath);
     }
 
